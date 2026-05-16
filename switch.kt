@@ -2,7 +2,6 @@
 // Kotlin es un lenguaje Fuerte y Estáticamente Tipado
 // SIEMPRE TIPAR VARIABLES //
 // POO
-
 data class Student( 
     val id: Long,  
     val name: String,
@@ -10,6 +9,16 @@ data class Student(
     val grade: Int,   
     val isActive: Boolean
 )
+
+
+fun getStudentResult(student: Student): String {
+    return when (student.grade) {
+        in 9..10 -> "Sobresaliente"
+        in 7..8 -> "APROBADO"
+        in 0..6 -> "Reprobado"
+        else -> "Nota Invalida"
+    }
+}
 
 fun main() {
     val student = Student(
@@ -61,12 +70,7 @@ fun main() {
         }
         
        
-        val result = when(student.grade) {
-            in 9..10 -> "Sobresaliente"
-            in 7..8 -> "APROBADO"
-            in 0..6 -> "Reprobado"
-            else -> "Nota Invalida"
-        }
+        val result = getStudentResult(student)
         
         println("${student.name}: $result")
     } 
