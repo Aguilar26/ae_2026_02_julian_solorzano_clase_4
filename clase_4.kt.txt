@@ -1,13 +1,1 @@
-// ae_2026_02_julian_solorzano_clase_4
-
-/*** Este es un comentario miltilinea de funcion ***/
-// Koltin lenguajes debilmente tipados
-// SIEMPRE TIPAR VARIABLES //
-//POO
-
-fun main() {
-    var name:String = "Julian"
-    var lastname: String = "Solorzano"
-    println("Hola $name $lastname")
-}
-
+|
